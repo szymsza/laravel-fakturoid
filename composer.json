@@ -1,5 +1,5 @@
 {
-    "name": "dominik-wbz/laravel-fakturoid",
+    "name": "szymsza/laravel-fakturoid",
     "description": "Fakturoid Laravel Wrapper",
     "keywords": [
         "webiz",
@@ -7,10 +7,15 @@
         "ecommerce",
         "invoicing"
     ],
-    "homepage": "https://github.com/dominik-wbz/laravel-fakturoid",
+    "homepage": "https://github.com/szymsza/laravel-fakturoid",
     "license": "MIT",
     "type": "library",
     "authors": [
+        {
+            "name": "Jakub Szymsza",
+            "email": "jakub@szymsza.cz",
+            "role": "Developer"
+        },
         {
             "name": "Dominik Nguyen",
             "email": "dom@webiz.cz",
@@ -23,10 +28,10 @@
         }
     ],
     "require": {
-        "php": ">=7.3.0",
-        "laravel/framework": "^7.0|^8.0",
-        "illuminate/support": "^7.0|^8.0",
-        "fakturoid/fakturoid-php": "^1.0"
+        "php": "^8.0",
+        "laravel/framework": "^9.0|^10.0",
+        "illuminate/support": "^9.0|^10.0",
+        "fakturoid/fakturoid-php": "^1.3"
     },
     "require-dev": {
         "mockery/mockery": "^1.3",
