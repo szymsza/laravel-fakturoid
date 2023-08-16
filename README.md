@@ -15,7 +15,7 @@ Simple wrapper for official php package https://github.com/fakturoid/fakturoid-p
 Add the package in your composer.json by executing the command.
 
 ```bash
-composer require dominik-wbz/laravel-fakturoid
+composer require szymsza/laravel-fakturoid
 ```
 
 This will both update composer.json and install the package into the vendor/ directory.
@@ -25,7 +25,7 @@ This will both update composer.json and install the package into the vendor/ dir
 First initialise the config file by running this command:
 
 ```bash
-php artisan vendor:publish
+php artisan vendor:publish --provider="WEBIZ\LaravelFakturoid\FakturoidServiceProvider" --tag="config"
 ```
 
 With this command, initialize the configuration and modify the created file, located under `config/fakturoid.php`.
