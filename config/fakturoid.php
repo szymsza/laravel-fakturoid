@@ -1,8 +1,7 @@
 <?php
 
 return [
-    'account_name' => env('FAKTUROID_NAME', 'XXX'),
-    'account_email' => env('FAKTUROID_EMAIL', 'XXX'),
-    'account_api_key' => env('FAKTUROID_API_KEY', 'XXX'),
+    'account_api_id' => env('FAKTUROID_API_ID', 'XXX'),
+    'account_api_secret' => env('FAKTUROID_API_SECRET', 'XXX'),
     'app_contact' => env('FAKTUROID_APP_CONTACT', 'Application <your@email.cz>'),
 ];

@@ -2,20 +2,26 @@
 
 namespace WEBIZ\LaravelFakturoid;
 
-use Fakturoid\Client as FakturoidClient;
+use Fakturoid\Exception\AuthorizationFailedException;
+use Fakturoid\FakturoidManager;
+use GuzzleHttp\Client;
 
 class LaravelFakturoid
 {
-    protected FakturoidClient $fakturoid;
+    protected FakturoidManager $fakturoid;
 
+    /**
+     * @throws AuthorizationFailedException
+     */
     public function __construct()
     {
-        $this->fakturoid = new FakturoidClient(
-            config('fakturoid.account_name'),
-            config('fakturoid.account_email'),
-            config('fakturoid.account_api_key'),
-            config('fakturoid.app_contact')
+        $this->fakturoid = new FakturoidManager(
+            new Client(),
+            config('fakturoid.account_api_id'),
+            config('fakturoid.account_api_secret'),
+            config('fakturoid.app_contact'),
         );
+        $this->fakturoid->authClientCredentials();
     }
 
     public function __call($method, $arguments)
