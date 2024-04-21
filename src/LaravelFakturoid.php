@@ -37,6 +37,6 @@ class LaravelFakturoid
             return $this->fakturoid->{$method}(...$arguments);
         }
 
-        return $this->handleOutdatedMethod($method, $arguments);
+        return $this->handlePreviousAPIMethod($method, $arguments);
     }
 }
