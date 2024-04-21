@@ -22,6 +22,7 @@ class LaravelFakturoid
             config('fakturoid.app_contact'),
         );
         $this->fakturoid->authClientCredentials();
+        $this->fakturoid->setAccountSlug(config('fakturoid.account_name'));
     }
 
     public function __call($method, $arguments)
