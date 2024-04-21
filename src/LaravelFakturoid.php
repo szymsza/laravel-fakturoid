@@ -8,6 +8,8 @@ use GuzzleHttp\Client;
 
 class LaravelFakturoid
 {
+    use V2Compatibility;
+
     protected FakturoidManager $fakturoid;
 
     /**
@@ -35,6 +37,6 @@ class LaravelFakturoid
             return $this->fakturoid->{$method}(...$arguments);
         }
 
-        throw new \BadMethodCallException("Method '{$method}' does not exist on Fakturoid instance.");
+        return $this->handleOutdatedMethod($method, $arguments);
     }
 }
