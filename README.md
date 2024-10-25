@@ -1,6 +1,6 @@
-# Laravel Fakturoid
+# Laravel Fakturoid v3
 
-Simple wrapper for official php package https://github.com/fakturoid/fakturoid-php
+Simple wrapper for the official PHP package https://github.com/fakturoid/fakturoid-php supporting the recent version 3
 
 ### Docs
 
