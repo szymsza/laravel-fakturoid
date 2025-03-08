@@ -2,6 +2,8 @@
 
 Simple wrapper for the official PHP package https://github.com/fakturoid/fakturoid-php supporting the recent version 3
 
+This branch works for PHP 8.0 as well.
+
 ### Docs
 
 - [Installation](#installation)
@@ -16,7 +18,7 @@ Simple wrapper for the official PHP package https://github.com/fakturoid/fakturo
 Add the package in your composer.json by executing the command.
 
 ```bash
-composer require szymsza/laravel-fakturoid
+composer require szymsza/laravel-fakturoid:dev-php-8.0
 ```
 
 This will both update composer.json and install the package into the vendor/ directory.
